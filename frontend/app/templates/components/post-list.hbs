@@ -1,0 +1,17 @@
+{{yield}}
+HELLO WORLD
+{{#each posts as |post|}}
+  {{post-tile
+    post=post
+  }}
+{{/each}}
+
+{{#if isCreatingPost}}
+  {{#ember-remodal}}
+    <p>Anything placed inside a modal's block will be rendered inside the modal.</p>
+    <img src="http://loremflickr.com/320/240" alt="random image" />
+  {{/ember-remodal}}
+
+{{/if}}
+
+<button {{action "createPost"}}>Create Post</button>

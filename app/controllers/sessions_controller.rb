@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def new
-    @user = User.new()
+    @user = User.new()  
     render :new
   end
 
@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     @user = User.confirm(user_params)
     if @user
       login(@user)
-      # redirect_to "/posts"
+      redirect_to "/posts"
     else
       head 403
     end
