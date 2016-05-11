@@ -1,13 +1,18 @@
 import Ember from 'ember';
 
 const PostListCompontent = Ember.Component.extend({
-  isCreatingPost: false;
+  newPostText: null,
+
+  isCreatingPost: false,
+
   actions: {
     createPost() {
       this.set("isCreatingPost", true);
     },
     savePost() {
       this.set("isCreatingPost", false)
+      this.sendAction("savePost", this.get("newPostText"))
+      this.set("newPostText", "");
     }
   }
 });
