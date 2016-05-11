@@ -3,14 +3,20 @@
   {{post-tile
     post=post
   }}
-{{/each}}
+{{/each}} 
 
 {{#if isCreatingPost}}
-  {{textarea
+  {{#modal-dialog 
+    translucentOverlay=true}}
+  <div>
+    {{textarea
     value=newPostText
     action="savePost"
-  }}
-  <button {{action "savePost"}}>Save Post</button>
+    }}
+  </div>
+    <button {{action "savePost"}}>Save Post</button>
+  {{/modal-dialog}}
+  
 {{else}}
   <button {{action "createPost"}}>Create Post</button>
 {{/if}}
