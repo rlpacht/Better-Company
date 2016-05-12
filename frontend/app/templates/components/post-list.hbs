@@ -6,6 +6,8 @@
     }}
   {{/each}} 
 
+  {{!-- {{infinite-scroll-container infiniteModelName='post'}} --}}
+</div>
   {{#if isCreatingPost}}
     {{#modal-dialog 
       translucentOverlay=true}}
@@ -18,7 +20,5 @@
       <button {{action "savePost"}}>Post</button>
     {{/modal-dialog}}
   {{else}}
-    <img src="assets/images/btn_compose.png" {{action "createPost"}}>
+    <img class="create-post" src="assets/images/btn_compose.png" {{action "createPost"}}>
   {{/if}}  
-  {{!-- {{infinite-scroll-container infiniteModelName='post'}} --}}
-</div>
