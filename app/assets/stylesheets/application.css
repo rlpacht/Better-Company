@@ -14,17 +14,29 @@
  *= require_self
  */
 
+html, body {
+  height: 100%;
+}
 
-body {
-  max-width: 100%;
+.ember-application, .login-form {
   background-image: url('img_background@2x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: -1;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.post-box {
+  background-color: white;
+  width: 300px;
+  border: solid 1px black;
+  margin-left: 30%;
+}
+
+.user-profile {
+  color: white;
 }
