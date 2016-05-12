@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  mount_ember_app :frontend, to: "/"
+
   namespace :api do 
-    resources :posts
+    resources :posts, :only => [:create, :index]
+    resources :users, :only => [:show]
   end
   get "/users/new", to: "users#new"
 
@@ -12,6 +13,6 @@ Rails.application.routes.draw do
   post "sessions", to: "sessions#create"
 
   delete "sessions", to: "sessions#destroy"
-  
-  
+
+  mount_ember_app :frontend, to: "/"  
 end

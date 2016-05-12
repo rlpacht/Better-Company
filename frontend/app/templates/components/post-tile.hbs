@@ -1,7 +1,7 @@
 {{yield}}
 <div class="post-box">
-  {{#link-to "users" post.user_id}}
-    {{post.author}}
+  {{#link-to "users" post.user}}
+    {{post.user.email}}
   {{/link-to}}
   <div>
     {{post.text}}    

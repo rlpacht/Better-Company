@@ -11,6 +11,9 @@
     <div class="password-field">
       <%= f.password_field :password, class: "form-control", placeholder: "Confirm Password" %>
     </div>
+
+    <%= f.text_field :description, class: "form-control", placeholder: "tell us about yourself" %>
+    
     <%= f.submit "Sign Up", class: "btn btn-primary"%>
   <% end %>
 </div>

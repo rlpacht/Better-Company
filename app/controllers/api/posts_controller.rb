@@ -4,9 +4,12 @@ class Api::PostsController < ApplicationController
     render :json => posts
   end
 
-  def create
-    new_post = params.require(:post).permit(:text, :author);
-    post = Post.create(new_post)
+  def create 
+    new_post = params.require(:post).permit(:text)
+    post = Post.create({
+      :text => new_post["text"], 
+      :user_id => current_user.id
+    })
     render :json => post
   end
 end
