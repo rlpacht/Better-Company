@@ -7,12 +7,13 @@ const PostListCompontent = Ember.Component.extend({
 
   actions: {
     createPost() {
-      this.set("isCreatingPost", true);
+      this.set('isCreatingPost', true);
     },
+
     savePost() {
-      this.set("isCreatingPost", false)
-      this.sendAction("savePost", this.get("newPostText"))
-      this.set("newPostText", "");
+      this.set('isCreatingPost', false)
+      this.sendAction('savePost', this.get('newPostText'))
+      this.set('newPostText', '');
     }
   }
 });

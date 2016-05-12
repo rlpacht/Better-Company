@@ -8,12 +8,12 @@
 {{#if isCreatingPost}}
   {{#modal-dialog 
     translucentOverlay=true}}
-  <div>
-    {{textarea
-    value=newPostText
-    action="savePost"
-    }}
-  </div>
+    <div>
+      {{textarea
+        value=newPostText
+        action="savePost"
+      }}
+    </div>
     <button {{action "savePost"}}>Save Post</button>
   {{/modal-dialog}}
   

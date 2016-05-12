@@ -1,8 +1,9 @@
 {{yield}}
 <div class="post-box">
-{{log post.data.user_id}}`
-{{#link-to "users" post.user_id}}
-  {{post.author}}
-{{/link-to}}
-  {{post.text}}    
+  {{#link-to "users" post.user_id}}
+    {{post.author}}
+  {{/link-to}}
+  <div>
+    {{post.text}}    
+  </div>
 </div>

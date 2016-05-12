@@ -7,7 +7,7 @@ const PostRoute = Ember.Route.extend({
 
   actions: {
     savePost(text) {
-      const newPost = this.store.createRecord("post", {
+      const newPost = this.store.createRecord('post', {
         text: text
       });
       newPost.save();
