@@ -28,15 +28,30 @@ html, body {
   bottom: 0;
   left: 0;
   right: 0;
+} 
+
+.post-list {
+  overflow: auto;
+  width: 60%;
+  height: 10%;
 }
 
 .post-box {
   background-color: white;
+  border-radius: 10%;
+  margin-top: 5%;
+  /*margin-bottom: 5%;*/
   width: 300px;
-  border: solid 1px black;
+  border: solid .5px black;
   margin-left: 30%;
 }
 
 .user-profile {
   color: white;
+  margin-left: 10%;
+}
+
+.back-to-posts {
+  color: white;
+  margin-left: 10%;
 }

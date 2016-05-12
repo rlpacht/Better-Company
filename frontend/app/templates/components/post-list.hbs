@@ -1,23 +1,23 @@
 {{yield}}
-{{#each posts as |post|}}
-  {{post-tile
-    post=post
-  }}
-{{/each}} 
+<div class=post-list>
+  {{#each posts as |post|}}
+    {{post-tile
+      post=post
+    }}
+  {{/each}} 
 
-{{#if isCreatingPost}}
-  {{#modal-dialog 
-    translucentOverlay=true}}
-    <div>
-      {{textarea
-        value=newPostText
-        action="savePost"
-      }}
-    </div>
-    <button {{action "savePost"}}>Save Post</button>
-  {{/modal-dialog}}
-  
-{{else}}
-  <button {{action "createPost"}}>Create Post</button>
-{{/if}}
-
+  {{#if isCreatingPost}}
+    {{#modal-dialog 
+      translucentOverlay=true}}
+      <div>
+        {{textarea
+          value=newPostText
+          action="savePost"
+        }}
+      </div>
+      <button {{action "savePost"}}>Post</button>
+    {{/modal-dialog}}
+  {{else}}
+    <img src="assets/images/btn_compose.png" {{action "createPost"}}>
+  {{/if}}  
+</div>
