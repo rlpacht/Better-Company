@@ -30,33 +30,16 @@ html, body {
   right: 0;
 } 
 
-.login-submit {
-  background-image: url('btn_signin.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  /*position: absolute;*/
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 20%;
-  /*width: 20%;*/
-  /*height: 200%;*/
-  display: block;
-  overflow: auto;
-  /*max-height: 5%;*/
-  color: white;
-}
-
 .post-list {
   overflow-y: scroll;
+  height: 100%;
   position: absolute;
-  /*top: 50%;*/
-  left: 35%;
-  max-height: 100%;
-  /*width: 60%;*/
-  /*height: 10%;*/
+  margin-left: -200px;
+}
+
+.posts-index {
+  display: flex;
+  justify-content: center;
 }
 
 .create-post {
@@ -64,23 +47,36 @@ html, body {
   bottom: 6%;
   left: 47%;
   height: 10%;
+  cursor: pointer;
 }
 
 .post-box {
   background-color: white;
-  max-width: 70%;
-  margin-top: 3%;
-  padding: 3%;
-  border-radius: 5%;
+  border-radius: 10px;
+  width: 400px;
+  margin: 10px;
+  padding: 5px;
+}
 
+.user-show {
+  position: fixed;
+  left: 41%;
+  top: 0;
 }
 
 .user-profile {
   color: white;
-  margin-left: 10%;
+  margin-left: 20%;
+  margin-bottom: 20%;
+}
+
+.user-image {
+  max-height: 10%;
+  width: 60%;
 }
 
 .back-to-posts {
   color: white;
   margin-left: 10%;
 }
+

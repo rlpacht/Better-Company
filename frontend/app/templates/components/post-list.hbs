@@ -13,8 +13,8 @@
   }}
     <div>
       {{textarea value=newPostText}}
-      <button {{action "savePost"}}>Post</button>
     </div>
+    <button {{action "savePost"}}>Post</button>
   {{/modal-dialog}}
 {{else}}
   <img class="create-post" src="assets/images/btn_compose.png" {{action "createPost"}}>

@@ -1,9 +1,11 @@
 {{outlet}}
-{{#link-to "posts"}}
-  <div class="back-to-posts glyphicon glyphicon-arrow-left"></div>
-{{/link-to}}
-<div class="user-profile">
-<img src="assets/images/img_user.png">
-  <div>{{model.email}}</div>
-  <div>{{model.description}}</div>
+<div class="user-show">
+  {{#link-to "posts"}}
+    <div class="back-to-posts glyphicon glyphicon-arrow-left"></div>
+  {{/link-to}}
+  <div class="user-profile">
+  <img class="user-image" src="assets/images/img_user.png">
+    <div>{{model.email}}</div>
+    <div>{{model.description}}</div>
+  </div>
 </div>

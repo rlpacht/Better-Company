@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 const PostListCompontent = Ember.Component.extend({
+  classNames: 'posts-index',
+  
   postsSort: ['createdAt:desc'],
 
   sortedPosts: Ember.computed.sort('posts', 'postsSort'),
