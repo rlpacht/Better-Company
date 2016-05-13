@@ -46,4 +46,4 @@ end
 
 gem "ember-cli-rails"
 gem "active_model_serializers"
-
+gem "font-awesome-rails"

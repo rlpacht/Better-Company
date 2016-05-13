@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require font-awesome
  *= require_self
  */
 
@@ -30,6 +31,24 @@ html, body {
   right: 0;
 } 
 
+.login-inputs {
+  margin-top: 15%;
+}
+
+.login {
+  max-width: 20%;
+  max-height: 18%;
+  position: relative;
+  left: 40%;
+}
+
+.login-submit {
+  background-color: #A18DFF;
+  color: white;
+  margin-top: 1%;
+  width: 20%;
+}
+
 .post-list {
   overflow-y: scroll;
   height: 100%;
@@ -45,7 +64,8 @@ html, body {
 .create-post {
   position: fixed;
   bottom: 6%;
-  left: 47%;
+  left: 50%;
+  margin-left: -36px;
   height: 10%;
   cursor: pointer;
 }
@@ -80,3 +100,12 @@ html, body {
   margin-left: 10%;
 }
 
+.signout-button {
+  color: white;
+}
+
+.box-shadow {
+  -webkit-box-shadow: 7px 6px 5px -2px rgba(0,0,0,0.41);
+  -moz-box-shadow: 7px 6px 5px -2px rgba(0,0,0,0.41);
+  box-shadow: 7px 6px 5px -2px rgba(0,0,0,0.41);
+}

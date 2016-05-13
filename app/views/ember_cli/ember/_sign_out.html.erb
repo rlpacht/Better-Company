@@ -1,2 +1,5 @@
-<%= link_to image_tag("btn_logout.svg", border: 0,  width: 136, height: 67), "/sessions/new", :method => :delete, :class => "signout-button btn" %>
+<%#= link_to image_tag("btn_logout.svg", border: 0,  width: 136, height: 67), "/sessions/new", :method => :delete, :class => "signout-button btn" %>
 
+<%= link_to "/sessions/new", :method => :delete, :class => "signout-button"  do %>
+  <i class="fa fa-sign-in fa-2x fa-rotate-180"></i>
+<% end %>

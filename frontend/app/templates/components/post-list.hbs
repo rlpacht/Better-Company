@@ -14,7 +14,7 @@
     <div>
       {{textarea value=newPostText}}
     </div>
-    <button {{action "savePost"}}>Post</button>
+    <button class="submit-post box-shadow" {{action "savePost"}}>Post</button>
   {{/modal-dialog}}
 {{else}}
   <img class="create-post" src="assets/images/btn_compose.png" {{action "createPost"}}>
