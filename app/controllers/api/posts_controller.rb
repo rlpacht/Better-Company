@@ -1,6 +1,6 @@
 class Api::PostsController < ApplicationController
   def index
-    posts = Post.all
+    posts = Post.all.order(:created_at).reverse
     render :json => posts
   end
 
@@ -10,6 +10,7 @@ class Api::PostsController < ApplicationController
       :text => new_post["text"], 
       :user_id => current_user.id
     })
+
     render :json => post
   end
 end

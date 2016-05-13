@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 const PostListCompontent = Ember.Component.extend({
+  postsSort: ['createdAt:desc'],
+
+  sortedPosts: Ember.computed.sort('posts', 'postsSort'),
+
   newPostText: null,
 
   isCreatingPost: false,
@@ -8,6 +12,11 @@ const PostListCompontent = Ember.Component.extend({
   actions: {
     createPost() {
       this.set('isCreatingPost', true);
+    },
+
+    cancelPosting() {
+      this.set('isCreatingPost', false);
+      this.set('newPostText', '');
     },
 
     savePost() {

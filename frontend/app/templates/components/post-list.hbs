@@ -1,24 +1,21 @@
 {{yield}}
 <div class="post-list">
-  {{#each posts as |post|}}
+  {{#each sortedPosts as |post|}}
     {{post-tile
       post=post
     }}
   {{/each}} 
-
-  {{!-- {{infinite-scroll-container infiniteModelName='post'}} --}}
 </div>
-  {{#if isCreatingPost}}
-    {{#modal-dialog 
-      translucentOverlay=true}}
-      <div>
-        {{textarea
-          value=newPostText
-          action="savePost"
-        }}
-      </div>
+{{#if isCreatingPost}}
+  {{#modal-dialog
+    translucentOverlay=true
+    close="cancelPosting"
+  }}
+    <div>
+      {{textarea value=newPostText}}
       <button {{action "savePost"}}>Post</button>
-    {{/modal-dialog}}
-  {{else}}
-    <img class="create-post" src="assets/images/btn_compose.png" {{action "createPost"}}>
-  {{/if}}  
+    </div>
+  {{/modal-dialog}}
+{{else}}
+  <img class="create-post" src="assets/images/btn_compose.png" {{action "createPost"}}>
+{{/if}}  
