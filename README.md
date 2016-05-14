@@ -2,8 +2,8 @@
 
 The live version can be found [here](https://better-company.herokuapp.com/sessions/new).
 There's already an account in the live database. The credentials are
-email: bettercompany@email.com
-password: testtest
+* email: bettercompany@email.com
+* password: testtest
 
 To run locally:
 
