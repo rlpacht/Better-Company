@@ -1,0 +1,25 @@
+{{yield}}
+{{post-list
+  posts=posts
+}}
+
+{{#if isCreatingPost}}
+  {{#modal-dialog
+    translucentOverlay=true
+    close="cancelPosting"
+    container-class="new-post-modal"
+  }}
+    <div>
+      {{textarea
+        value=newPostText
+        class="new-post"
+        placeholder="What do you want to say?"
+      }}
+    </div>
+    <button class="submit-post box-shadow btn" {{action "savePost"}}>
+      Post
+    </button>
+  {{/modal-dialog}}
+{{else}}
+  <img class="create-post" src="assets/images/btn_compose.png" {{action "createPost"}}>
+{{/if}}  
