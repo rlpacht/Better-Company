@@ -14,5 +14,5 @@ Rails.application.routes.draw do
 
   delete "sessions", to: "sessions#destroy"
 
-  mount_ember_app :frontend, to: "/"  
+  mount_ember_app :frontend, to: "/"
 end

@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 const PostListCompontent = Ember.Component.extend({
-  classNames: 'post-list',
+
   
   postsSort: ['createdAt:desc'],
 
