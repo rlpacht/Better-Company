@@ -47,3 +47,7 @@ end
 gem "ember-cli-rails"
 gem "active_model_serializers"
 gem "font-awesome-rails"
+
+gem 'rails_12factor', group: [:staging, :production]
+
+ruby "2.2.1"
