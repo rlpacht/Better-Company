@@ -1,19 +1,19 @@
 <div class="signup-form form-horizontal">
   <%=form_for @user do |f| %>
     <div class="email-field">
-      <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
+      <%= f.email_field :email, class: "form-control sign-up", placeholder: "Email" %>
     </div>
 
     <div class="password-field">
-      <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+      <%= f.password_field :password, class: "form-control sign-up", placeholder: "Password" %>
     </div>
 
     <div class="password-field">
-      <%= f.password_field :password, class: "form-control", placeholder: "Confirm Password" %>
+      <%= f.password_field :password, class: "form-control sign-up", placeholder: "Confirm Password" %>
     </div>
 
-    <%= f.text_field :description, class: "form-control", placeholder: "tell us about yourself" %>
+    <%= f.text_field :description, class: "form-control sign-up", placeholder: "Tell us about yourself" %>
     
-    <%= f.submit "Sign Up", class: "btn btn-primary"%>
+    <%= f.submit "Sign Up", class: "sign-up sign-up-submit btn"%>
   <% end %>
 </div>

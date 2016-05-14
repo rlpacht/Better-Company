@@ -1,7 +1,10 @@
 {{yield}}
-{{#link-to "users" post.user}}
-  {{post.user.email}}
-{{/link-to}}
-<div>
+<div class="profile-link">
+  {{#link-to "users" post.user}}
+    {{post.user.email}}
+  {{/link-to}}  
+</div>
+
+<div class="post-text">
   {{post.text}}    
 </div>

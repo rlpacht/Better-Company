@@ -15,11 +15,56 @@
  *= require_self
  */
 
+@font-face {
+  font-family: 'quicksand-dash';
+  font-variant: url('Quicksand-Dash.oft');
+  /*font-weight: normal;*/
+  /*font-style: normal;*/
+}
+@font-face {
+  font-family: 'quicksand-bold';
+  font-variant: url('Quicksand-Bold.oft');
+  font-weight: 700;
+  /*font-style: normal;*/
+}
+@font-face {
+  font-family: 'quicksand-bolditalic';
+  font-variant: url('Quicksand-BoldItalic.oft');
+  /*font-weight: normal;*/
+  /*font-style: normal;*/
+}
+@font-face {
+  font-family: 'quicksand-regular';
+  font-variant: url('Quicksand-Regular.oft');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'quicksand-light';
+  font-variant: url('Quicksand-Light.oft');
+  /*font-weight: normal;*/
+  /*font-style: normal;*/
+}
+@font-face {
+  font-family: 'quicksand-italic';
+  font-variant: url('Quicksand-Italic.oft');
+  /*font-weight: normal;*/
+  /*font-style: normal;*/
+}
+
+@font-face {
+  font-family: 'quicksand-lightitalic';
+  font-variant: url('Quicksand-LightItalic.oft');
+  /*font-weight: normal;*/
+  /*font-style: normal;*/
+}
+
 html, body {
   height: 100%;
 }
 
-.ember-application, .login-form {
+.ember-application, .login-form, .signup-form {
+  font-family: 'quicksand-regular';
   background-image: url('img_background@2x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,15 +76,22 @@ html, body {
   right: 0;
 } 
 
-.login-inputs {
-  margin-top: 15%;
+.title {
+  color: white;
+  text-align: center;
+  margin-top: 8%;
 }
 
-.login {
+.site-description {
+  margin-bottom: 1%;
+}
+
+.login{
   max-width: 20%;
   max-height: 18%;
   position: relative;
   left: 40%;
+  top: 0;
 }
 
 .login-submit {
@@ -70,6 +122,31 @@ html, body {
   cursor: pointer;
 }
 
+.new-post-modal {
+  height: 25%;
+  width: 25%; 
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.new-post {
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  border-radius: 4%;
+}
+
+.submit-post {
+  position: relative;
+  margin-top: 60%;
+  background-color: #A18DFF;
+  color: white;
+  width: 100%;
+}
+
 .post-box {
   background-color: white;
   border-radius: 10px;
@@ -78,9 +155,22 @@ html, body {
   padding: 5px;
 }
 
+.profile-link a {
+  text-decoration: none;
+  color: #3E3E3E;
+}
+
+.post-text {
+  color: #939393;
+}
+
+.link-wrapper {
+  padding-right: 20%; 
+}
+
 .user-show {
   position: fixed;
-  left: 41%;
+  left: 38%;
   top: 0;
 }
 
@@ -88,6 +178,7 @@ html, body {
   color: white;
   margin-left: 20%;
   margin-bottom: 20%;
+  text-align: center;
 }
 
 .user-image {
